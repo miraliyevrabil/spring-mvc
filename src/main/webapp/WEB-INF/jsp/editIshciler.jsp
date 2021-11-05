@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri= "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,12 @@
 		Unvan:<form:input path="unvan"/>
 		<form:errors path="unvan"/><br>
 		Maas:<form:input path="maas"/>
-		<form:errors path="maas"/><br>
+		<form:errors path="maas"/><br>City:<select name="city" >
+    <c:forEach items="${city}" var="city">
+    <!-- city id ni arxaya gonderirem city name fronta -->
+        <option value="${city.id}" >${city.name}</option>
+    </c:forEach>
+</select>
 		<form:button name="submit">Update</form:button>
 		
 	

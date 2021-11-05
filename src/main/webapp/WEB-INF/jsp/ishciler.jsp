@@ -18,6 +18,8 @@
 				<td>Bolme</td>
 				<td>Unvan</td>
 				<td>Maas</td>
+				<td>City</td>
+				
 			
 			</tr>
 		
@@ -34,6 +36,8 @@
 				<td>${ishciler.bolme1}</td>
 				<td>${ishciler.unvan}</td>
 				<td>${ishciler.maas}</td>
+				<!-- isciler clasinda city clasindan yaratdigim city obyektinin name -  -->
+				<td>${ishciler.city.name}</td>
 				<td> <button><a href="http://localhost:8080/ishciler/update/${ishciler.id}">Update</a> </button></td>
 				<td> <button><a href="http://localhost:8080/ishciler/delete/${ishciler.id}">Delete</a> </button></td>	
 			</tr>
@@ -41,7 +45,7 @@
 		</c:forEach>
 	
 	</table>
-	<button><a href="http://localhost:8080/ishciler/new">Create</a></button>
+	<button><a href="http://localhost:8080/ishciler/new">Create</a></button> <button><a href="http://localhost:8080/city">City</a></button><button><a href="http://localhost:8080/computers">Computers</button>
 	<c:if test="${not empty message}">
 		<div style="color:blue;">
 		${message}
