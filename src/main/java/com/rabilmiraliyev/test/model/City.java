@@ -12,7 +12,7 @@ public class City {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotEmpty
-	private String name;
+	private String name1;//sql query yazanda computers deki name ile qarisirdi die name 1 eledim
 	
 	public Long getId() {
 		return id;
@@ -21,14 +21,14 @@ public class City {
 		this.id = id;
 	}
 	public String getName() {
-		return name;
+		return name1;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.name1 = name;
 	}
 	@Override
 	public String toString() {
-		return "City [id=" + id + ", name=" + name + "]";
+		return "City [id=" + id + ", name=" + name1 + "]";
 	}
 	
 }

@@ -10,6 +10,10 @@ import com.rabilmiraliyev.test.dao.IshcilerRepository;
 import com.rabilmiraliyev.test.exception.IshcilerNotFoundException;
 import com.rabilmiraliyev.test.model.Ishciler;
 
+import projection.FullIstifadeciler;
+import projection.IshcilerIdAndName;
+import projection.IshcilerIdAndNameCompNew;
+
 @Service
 public class TestServiceImpl implements TestService {
 	
@@ -57,6 +61,25 @@ public class TestServiceImpl implements TestService {
 	public void deleteIshciler(Long id) {
 		ishcilerRepository.deleteById(id);
 
+	}
+	
+	@Override
+	public List<FullIstifadeciler> getData() {
+		
+		List<FullIstifadeciler> lists=ishcilerRepository.getData();
+		return lists;
+	}
+
+	@Override
+	public List<IshcilerIdAndName> getIdAndName() {
+		List<IshcilerIdAndName> lists=ishcilerRepository.getIdName();
+		return lists;
+	}
+
+	@Override
+	public List<IshcilerIdAndNameCompNew> getIdAndNameCompNew() {
+		List<IshcilerIdAndNameCompNew> lists=ishcilerRepository.getIdAndNameCompNew();
+		return lists;
 	}
 
 }

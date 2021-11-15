@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.rabilmiraliyev.test.model.City;
-import com.rabilmiraliyev.test.model.Ishciler;
 import com.rabilmiraliyev.test.service.CityService;
 
 @Controller

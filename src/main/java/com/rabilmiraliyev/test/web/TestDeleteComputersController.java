@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.rabilmiraliyev.test.model.City;
 import com.rabilmiraliyev.test.model.Computers;
 import com.rabilmiraliyev.test.service.ComputersService;
 

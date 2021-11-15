@@ -2,22 +2,14 @@ package com.rabilmiraliyev.test.model;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.NotEmpty;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
-import com.rabilmiraliyev.test.model.City;
 
 @XmlRootElement
 @Entity
@@ -25,16 +17,16 @@ public class Ishciler {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@NotEmpty
+//	@NotEmpty
 	private String ad;
-	@NotEmpty
+	//@NotEmpty
 	private String soyad;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dogumTarixi;
-	@NotEmpty
+//	@NotEmpty
 	private String bolme1;
-	@NotEmpty
+//	@NotEmpty
 	private String unvan;
 	
 	private float maas;

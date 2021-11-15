@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.rabilmiraliyev.test.model.City;
 import com.rabilmiraliyev.test.model.Computers;
 import com.rabilmiraliyev.test.service.ComputersService;
 import com.rabilmiraliyev.test.service.TestService;
@@ -28,7 +27,8 @@ public class TestNewComputersController {
 	@RequestMapping(value = "/computers/new",method = RequestMethod.GET)
 	public ModelAndView newCcomputers(Computers computers) {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("ishciler", testService.findIshciler());
+		//compseyfesi yuklenende find ishciler yox get id and name gelir
+		mav.addObject("ishcileridandname", testService.getIdAndNameCompNew());
 		mav.setViewName("newComputers");
 		return mav;
 		

@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: Rabil
-Build-Jdk: 17
 Implementation-Title: test
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Rabil
 Implementation-Vendor-Id: com.rabilmiraliyev
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/test
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/test
 Created-By: Maven Integration for Eclipse
 

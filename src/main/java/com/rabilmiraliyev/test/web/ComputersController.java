@@ -14,7 +14,6 @@ public class ComputersController {
 	@Autowired
 	private ComputersService computersService;
 	
-	
 	@RequestMapping("/computers")
 	public ModelAndView getComputers() {
 		ModelAndView mav = new ModelAndView();
