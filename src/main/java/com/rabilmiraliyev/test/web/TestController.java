@@ -42,4 +42,29 @@ public class TestController {
 		return testService.getIdAndName();
 	}
 	
+	@RequestMapping("/")
+	public ModelAndView index() {
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index");
+		return mav;
+		
+	}
+		
+		@RequestMapping("/login.html")
+		public ModelAndView login() {
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("login");
+			return mav;
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
