@@ -22,7 +22,7 @@
 			<tr> 
 				<td>${city.id}</td>
 				<td>${city.name}</td>
-			
+				
 				<td> <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i><a href="http://localhost:8080/city/update/${city.id}"style="text-decoration: none; color: black"> Update</a></button></td>
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
 				<td> <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i><a href="http://localhost:8080/city/delete/${city.id}"style="text-decoration: none; color: black"> Delete</a></button></td>	

@@ -10,11 +10,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form modelAttribute="city" method="post">
-		<h1>Delete?</h1>
-		<form:button name="submit">Delete</form:button>
-		<form:button ><a href="http://localhost:8080/city" style="text-decoration: none; color: black">No</a></form:button>
-		
+	
+		<form:form modelAttribute="users" method="post">
+		<form:input path="username"/>
+		<form:errors path="username"/><br><br>
+		<form:input path="password"/>
+		<form:errors path="password"/><br><br>
+		<form:input path="enabled"/>
+		<form:errors path="enabled"/><br><br>
+		<form:button name="submit"> Update</form:button>
 	
 	
 	</form:form>
