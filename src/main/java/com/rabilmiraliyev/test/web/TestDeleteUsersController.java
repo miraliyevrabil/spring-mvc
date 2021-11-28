@@ -27,7 +27,7 @@ public class TestDeleteUsersController {
 	@RequestMapping(value = "/users/delete/{id}", method = RequestMethod.POST)
 	public String handleForSubmit(@PathVariable Long id, RedirectAttributes redirectAttributes) {
 		usersService.deleteUsers(id);
-		redirectAttributes.addFlashAttribute("message", "Users deleted by id :"+id);
+		redirectAttributes.addFlashAttribute("message", "İd-si " +id+ " olan İstifadəçi silindi!");
 		return "redirect:/users";
 		
 	}

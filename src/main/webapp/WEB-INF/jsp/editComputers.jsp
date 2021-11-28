@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Yenilə</title>
 </head>
 <body>
 	<form:form modelAttribute="computers" method="post">
@@ -21,7 +21,7 @@
     </c:forEach>
 </select> <br><br>
 
-		<form:button name="submit">Update</form:button>
+		<form:button name="submit">Yenilə</form:button>
 		
 	
 	

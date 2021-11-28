@@ -32,7 +32,7 @@ public class TestNewUsersController {
 			return "newUsers";
 		}
 		userService.createUsers(users);;
-		redirectAttributes.addFlashAttribute("message", "Users created by id :"+ users.getId());
+		redirectAttributes.addFlashAttribute("message", ""+ users.getId()+"İd-si ilə yeni İstifadəçi yaradıldı!");
 		return "redirect:/users";
 }
 }

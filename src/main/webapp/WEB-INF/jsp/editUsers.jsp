@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Yenilə</title>
 </head>
 <body>
 	
@@ -16,9 +16,11 @@
 		<form:errors path="username"/><br><br>
 		<form:input path="password"/>
 		<form:errors path="password"/><br><br>
-		<form:input path="enabled"/>
-		<form:errors path="enabled"/><br><br>
-		<form:button name="submit"> Update</form:button>
+		<select  name="enabled" >
+	  	<option value="true" style="color: green;">True</option>
+		  <option value="false" style="color: red;">False</option>
+		</select><br><br>
+		<form:button name="submit"> Yenilə</form:button>
 	
 	
 	</form:form>

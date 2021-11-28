@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import com.rabilmiraliyev.test.dao.UsersRepository;
 import com.rabilmiraliyev.test.model.Users;
+
+import projection.UsersUsername;
 @Service
 @Secured("ROLE_ADMIN")
 public class UsersServiceImpl implements UsersService{
@@ -47,8 +49,9 @@ public class UsersServiceImpl implements UsersService{
 	}
 
 	@Override
-	public Users findUsers(String username) {
-		return null;
+	public List<UsersUsername> getUsersUsername() {
+		List<UsersUsername> lists = usersRepository.getUsersUsername();
+		return lists;
 	}
 
 }

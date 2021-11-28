@@ -41,7 +41,7 @@ public class TestNewIshcilerController {
 			return "newIshciler";
 		}
 		testService.createIshciler(ishciler);
-		redirectAttributes.addFlashAttribute("message", "Ishci created by id:"+ishciler.getId());
+		redirectAttributes.addFlashAttribute("message", ""+ishciler.getId()+"İd-si ilə yeni İşçi yaradıldı!");
 		return "redirect:/ishciler";
 	}
 }

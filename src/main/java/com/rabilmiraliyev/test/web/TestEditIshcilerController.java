@@ -41,7 +41,7 @@ public class TestEditIshcilerController {
 			return "editIshciler";
 		}
 		testService.update(ishciler);
-		redirectAttributes.addFlashAttribute("message", "Ishci updated by id:"+ ishciler.getId());
+		redirectAttributes.addFlashAttribute("message", "İd-si "+ ishciler.getId()+ "olan İşçi yeniləndi!");
 		return "redirect:/ishciler";
 	}
 }

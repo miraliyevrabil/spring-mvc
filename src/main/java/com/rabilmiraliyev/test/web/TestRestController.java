@@ -18,8 +18,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.rabilmiraliyev.test.exception.InternalServerException;
 import com.rabilmiraliyev.test.exception.IshcilerNotFoundException;
+import com.rabilmiraliyev.test.model.Authorities;
 import com.rabilmiraliyev.test.model.Ishciler;
 import com.rabilmiraliyev.test.service.TestService;
+import com.rabilmiraliyev.test.service.UsersService;
+
+import projection.UsersUsername;
 
 @RestController
 @RequestMapping("/rest")
@@ -27,6 +31,8 @@ public class TestRestController {
 	@Autowired
 	private TestService testService;
 
+	@Autowired
+	private UsersService usersService;
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "/ishciler/{id}")
 	public ResponseEntity<?> deleteIshciler(@PathVariable("id") Long id) {
@@ -104,5 +110,13 @@ public class TestRestController {
 		} catch (IshcilerNotFoundException ex) {
 			return ResponseEntity.notFound().build();
 		}
+	}
+	
+	@RequestMapping(value = "/testauth",method = RequestMethod.GET)
+	public List<UsersUsername> newAuthorities(Authorities authorities) {
+//		ModelAndView mav = new ModelAndView();
+//		mav.addObject("usersusername", usersService.getUsersUsername());
+//		mav.setViewName("newAuthorities");
+		return usersService.getUsersUsername();
 	}
 }

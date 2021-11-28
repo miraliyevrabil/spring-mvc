@@ -8,11 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.core.annotation.Order;
-
 @Entity
 @Table(name = "USERS")
-public class Users {
+public class Users extends Parent {
 	@Id
 	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

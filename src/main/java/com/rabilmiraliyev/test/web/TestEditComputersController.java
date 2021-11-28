@@ -43,7 +43,7 @@ public class TestEditComputersController {
 		}
 		
 		computersService.update(computers);
-		redirectAttributes.addFlashAttribute("message", "Computers updated by id:"+ computers.getId());
+		redirectAttributes.addFlashAttribute("message", "İd-si "+computers.getId()+" olan Komputer yeniləndi!" );
 		return "redirect:/computers";
 	}
 	

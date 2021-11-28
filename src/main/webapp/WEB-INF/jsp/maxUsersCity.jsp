@@ -9,28 +9,22 @@
 <html>
    <head>
    <meta charset="UTF-8">
-      <title>Query</title>
+      <title>Stats</title>
    </head>
    <body>
-      <sql:setDataSource var = "snapshot" driver = "org.h2.Driver"
-         url = "jdbc:h2:mem:testdb"
-         user = "sa" password = ""/>
-         <sql:query dataSource = "${snapshot}" var = "result">
-		select ist.ad ischi_adi,ct.name1 city_name,co.name comp_name from ISHCILER ist
-        join city ct on ct.id=ist.city_id
-        join computers co on co.ishciler_id=ist.id;
-      </sql:query>
       <table class="table" style="width: 500">
-         <tr>
-            <th>Ishci Name</th>
-            <th>City Name</th>
-            <th>Comp Name</th>
+          <tr>
+          	<th>Şəhər Adı</th>
+            <th>Şəhər İD</th>
+            <th>Say</th>
+           
+           
          </tr>
-         <c:forEach var = "result" items = "${result.rows}">
+         <c:forEach var = "maxUsersCity" items = "${maxUsersCity}">
             <tr>
-               <td> <c:out value = "${result.ad}"/></td>
-               <td> <c:out value = "${result.name1}"/></td>
-               <td> <c:out value = "${result.name}"/></td>
+           	 <td> <c:out value = "${maxUsersCity.name1}"/></td>
+              <td> <c:out value = "${maxUsersCity.stats_city}"/></td>
+               <td> <c:out value = "${maxUsersCity.max_value}"/></td>
             </tr>
          </c:forEach>
       </table>

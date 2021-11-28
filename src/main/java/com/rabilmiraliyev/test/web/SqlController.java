@@ -10,7 +10,7 @@ public class SqlController {
 	
 	@RequestMapping("/sql")
 	public String getSql() {
-		return "sql";
+		return "name";
 	}
 
 }

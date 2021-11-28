@@ -8,19 +8,25 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.rabilmiraliyev.test.model.Authorities;
 import com.rabilmiraliyev.test.service.AuthoritiesService;
+import com.rabilmiraliyev.test.service.UsersService;
 
 @Controller
 public class TestNewAuthoritiesController {
 	@Autowired
 	private AuthoritiesService authoritiesService;
+	@Autowired
+	private UsersService usersService;
 	@RequestMapping(value = "/authorities/new",method = RequestMethod.GET)
-	public String newAuthorities(Authorities authorities) {
-		
-		return "newAuthorities";
+	public ModelAndView newAuthorities(Authorities authorities) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("username", usersService.getUsersUsername());
+		mav.setViewName("newAuthorities");
+		return mav;
 	}
 	@ModelAttribute
 	public Authorities initModel() {
@@ -32,7 +38,7 @@ public class TestNewAuthoritiesController {
 			return "newAuthorities";
 		}
 		authoritiesService.createAuthorities(authorities);;
-		redirectAttributes.addFlashAttribute("message", "Authority created by username :"+ authorities.getUsername());
+		redirectAttributes.addFlashAttribute("message", ""+ authorities.getUsername()+"İstifadəçi adı ilə yeni Rol yaradıldı!");
 		return "redirect:/authorities";
 }
 

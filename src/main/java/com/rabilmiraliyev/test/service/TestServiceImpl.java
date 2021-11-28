@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
-import com.rabilmiraliyev.test.dao.ComputerRepository;
 import com.rabilmiraliyev.test.dao.IshcilerRepository;
 import com.rabilmiraliyev.test.exception.IshcilerNotFoundException;
 import com.rabilmiraliyev.test.model.Ishciler;
@@ -15,6 +14,9 @@ import com.rabilmiraliyev.test.model.Ishciler;
 import projection.FullIstifadeciler;
 import projection.IshcilerIdAndName;
 import projection.IshcilerIdAndNameCompNew;
+import projection.MaxUsersCity;
+import projection.SameComp;
+import projection.StatsCity;
 
 @Service
 public class TestServiceImpl implements TestService {
@@ -86,6 +88,24 @@ public class TestServiceImpl implements TestService {
 	@Override
 	public List<IshcilerIdAndNameCompNew> getIdAndNameCompNew() {
 		List<IshcilerIdAndNameCompNew> lists=ishcilerRepository.getIdAndNameCompNew();
+		return lists;
+	}
+
+	@Override
+	public List<StatsCity> getStatsCity() {
+		List<StatsCity> lists=ishcilerRepository.getStatsCity();
+		return lists;
+	}
+
+	@Override
+	public List<MaxUsersCity> getMaxUsersCity() {
+		List<MaxUsersCity> lists = ishcilerRepository.getMaxUsersCity();
+		return lists;
+	}
+
+	@Override
+	public List<SameComp> getSameComp() {
+		List<SameComp> lists = ishcilerRepository.getSameComp();
 		return lists;
 	}
 

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Giriş</title>
 </head>
 <body>
 <h1>Daxil Olun!</h1>
@@ -13,7 +13,7 @@
 	<input placeholder="İstifadəci adı" type="text" name="username"/><br><br>
 	<input placeholder="Parol" type="password" name="password"/><br><br>
 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-	<input type="submit" value="login"/>
+	<input type="submit" value="Daxil ol"/>
 	<font color="red">
 		<c:if test="${not empty param.loginFailed}">
 			<c:out value="Uğursuz giriş , yanlış istifadəçi adı və ya parol"></c:out>

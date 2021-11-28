@@ -33,7 +33,7 @@ public class TestEditCityController {
 			return "editCity";
 		}
 		cityService.update(city);
-		redirectAttributes.addFlashAttribute("message", "City updated by id:"+ city.getId());
+		redirectAttributes.addFlashAttribute("message", "İd-si "+city.getId()+" olan Şəhər yeniləndi!" );
 		return "redirect:/city";
 	}
 	

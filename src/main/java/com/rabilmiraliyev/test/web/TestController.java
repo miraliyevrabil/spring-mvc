@@ -10,15 +10,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.rabilmiraliyev.test.service.TestService;
 
-import projection.FullIstifadeciler;
 import projection.IshcilerIdAndName;
+import projection.MaxUsersCity;
 
 @Controller
 public class TestController {
 	
 	@Autowired
 	private TestService testService;
-	
+//	@Autowired
+//	private CityService cityService;
 	
 	@RequestMapping("/ishciler")
 	public ModelAndView getishciler() {
@@ -31,15 +32,52 @@ public class TestController {
 	
 	
 	
+	/*
+	 * @RequestMapping("/test")
+	 * 
+	 * @ResponseBody public List<FullIstifadeciler> welcome() { return
+	 * testService.getData(); }
+	 */
 	@RequestMapping("/test")
-	@ResponseBody
-	public List<FullIstifadeciler> welcome() {
-		return testService.getData();
+	public ModelAndView welcome() {
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("adlar", testService.getData());
+		mav.setViewName("adlar");
+		return mav;
 	}
 	@RequestMapping("/test1")
 	@ResponseBody
-	public List<IshcilerIdAndName> welcome1(ModelAndView mav) {
-		return testService.getIdAndName();
+	public ModelAndView welcome1( ) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("maxUsersCity", testService.getMaxUsersCity());
+		mav.setViewName("maxUsersCity");
+		return mav;
+	}
+	
+	/*
+	 * @RequestMapping("/test2")
+	 * 
+	 * @ResponseBody public List<StatsCity> welcome2(ModelAndView mav) { return
+	 * testService.getStatsCity(); }
+	 */
+	@RequestMapping("/test2")
+	public ModelAndView welcome2() {
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("stats", testService.getStatsCity());
+	//	mav.addObject("stats", cityService.findCity());
+		mav.setViewName("stats");
+		return mav;
+		
+	}
+	@RequestMapping("/test3")
+	@ResponseBody
+	public ModelAndView welcome3( ) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("sameComp", testService.getSameComp());
+		mav.setViewName("sameComp");
+		return mav;
 	}
 	
 	@RequestMapping("/")

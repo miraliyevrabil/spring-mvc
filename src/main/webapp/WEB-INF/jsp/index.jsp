@@ -7,17 +7,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Əsas Səhifə</title>
 </head>
 <body>
 	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/ishciler" style="text-decoration: none; color: black">Işçilər</button>
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/city" style="text-decoration: none; color: black">City</a></button>
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/computers" style="text-decoration: none; color: black">Computers</button></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/city" style="text-decoration: none; color: black">Şəhərlər</a></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/computers" style="text-decoration: none; color: black">Komputerlər</button></button>
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/users" style="text-decoration: none; color: black">Users</button></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/users" style="text-decoration: none; color: black">İstifadəçilər</button></button>
 	</sec:authorize>	
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black">Authorities</button></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black">Rollar</button></button>
 	</sec:authorize>
 	<br><br>
 	<form action="logout" method="post">

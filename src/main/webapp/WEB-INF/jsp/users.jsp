@@ -9,15 +9,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>İstifadəçilər</title>
 </head>
 <body>
 	<table class="table" style="width: 900;">
 		<thead>
 			<tr>
 			
-				<td>Username</td>
-				<td>Password</td>
+				<td>İstifadəçi adı</td>
+				<td>Parol</td>
 				<td>Enabled</td>
 			</tr>
 		</thead>
@@ -28,10 +28,10 @@
 				<td>${users.password}</td>
 				<td>${users.enabled}</td>
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
-				<td> <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i><a href="http://localhost:8080/users/update/${users.id}" style="text-decoration: none; color: black"> Update</a> </button></td>
+				<td> <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i><a href="http://localhost:8080/users/update/${users.id}" style="text-decoration: none; color: black"> Yenilə</a> </button></td>
 				</sec:authorize>
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
-<td> <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i><a href="http://localhost:8080/users/delete/${users.id}" style="text-decoration: none; color: black"> Delete</a> </button></td>	
+<td> <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i><a href="http://localhost:8080/users/delete/${users.id}" style="text-decoration: none; color: black"> Sil</a> </button></td>	
 				</sec:authorize>	
 			</tr>
 		
@@ -39,15 +39,15 @@
 	
 	</table>
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-	<button type="button" class="btn btn-secondary"><i class="fa fa-plus"></i><a href="http://localhost:8080/users/new" style="text-decoration: none; color: black"> Create</a></button> 
+	<button type="button" class="btn btn-secondary"><i class="fa fa-plus"></i><a href="http://localhost:8080/users/new" style="text-decoration: none; color: black"> Əlavə et</a></button> 
 	</sec:authorize>
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black"> Authorities</a></button> 
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black"> Rollar</a></button> 
 	</sec:authorize>
 	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/ishciler" style="text-decoration: none; color: black">Işçilər</a></button>
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/city" style="text-decoration: none; color: black">City</a></button>
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/computers" style="text-decoration: none; color: black">Computers</button></button>
-	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/sql" style="text-decoration: none; color: black">Name Query</button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/city" style="text-decoration: none; color: black">Şəhərlər</a></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/computers" style="text-decoration: none; color: black">Komputerlər</button></button>
+	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/sql" style="text-decoration: none; color: black">Adlar</button>
 	<button type="button" class="btn btn-secondary"><a href="http://localhost:8080/" style="text-decoration: none; color: black">Əsas Səhifə</button>
 	<c:if test="${not empty message}">
 		<div style="color:blue;">

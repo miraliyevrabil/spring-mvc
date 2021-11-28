@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Əlavə et</title>
 </head>
 <body>
 	<form:form modelAttribute="city" method="post">
-		<form:input  placeholder="City" path="name"/>
+		<form:input  placeholder="Şəhər" path="name"/>
 		<form:errors path="name"/><br><br>
-		<form:button name="submit">Create</form:button>
+		<form:button name="submit">Əlavə et</form:button>
 	
 	</form:form>
 

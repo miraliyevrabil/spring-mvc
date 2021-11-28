@@ -29,7 +29,7 @@ public class TestDeleteCityController {
 	@RequestMapping(value = "/city/delete/{id}", method = RequestMethod.POST)
 	public String handleForSubmit(@PathVariable Long id, RedirectAttributes redirectAttributes) {
 		cityService.deleteCity(id);
-		redirectAttributes.addFlashAttribute("message", "City deleted by id :"+id);
+		redirectAttributes.addFlashAttribute("message", "İd-si "+id+ " olan Şəhər silindi!");
 		return "redirect:/city";
 		
 	}

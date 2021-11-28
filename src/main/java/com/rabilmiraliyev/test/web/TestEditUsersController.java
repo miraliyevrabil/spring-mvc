@@ -32,7 +32,7 @@ public class TestEditUsersController {
 			return "editUsers";
 		}
 		usersService.updateUsers(users);
-		redirectAttributes.addFlashAttribute("message", "User updated by id:"+ users.getId());
+		redirectAttributes.addFlashAttribute("message", "İd-si "+ users.getId()+ "olan İstifadəşi yeniləndi by id:");
 		return "redirect:/users";
 	}
 

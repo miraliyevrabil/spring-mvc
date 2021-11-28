@@ -35,7 +35,7 @@ public class TestNewCityController {
 		}
 			
 		cityService.createCity(city);
-		redirectAttributes.addFlashAttribute("message", "City created by id:"+ city.getId());
+		redirectAttributes.addFlashAttribute("message", ""+ city.getId()+"İd-si ilə yeni Şəhər yaradıldı!");
 		return "redirect:/city";
 	}
 }

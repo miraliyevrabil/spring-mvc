@@ -8,6 +8,9 @@ import com.rabilmiraliyev.test.model.Ishciler;
 import projection.FullIstifadeciler;
 import projection.IshcilerIdAndName;
 import projection.IshcilerIdAndNameCompNew;
+import projection.MaxUsersCity;
+import projection.SameComp;
+import projection.StatsCity;
 
 public interface TestService {
 	List<Ishciler> findIshciler();
@@ -18,4 +21,7 @@ public interface TestService {
 	List<FullIstifadeciler> getData();
 	List<IshcilerIdAndName> getIdAndName();
 	List<IshcilerIdAndNameCompNew> getIdAndNameCompNew();
+	List<StatsCity> getStatsCity();
+	List<MaxUsersCity> getMaxUsersCity();
+	List<SameComp> getSameComp();
 }

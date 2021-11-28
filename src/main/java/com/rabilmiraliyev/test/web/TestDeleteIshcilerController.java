@@ -28,7 +28,7 @@ public class TestDeleteIshcilerController {
 	@RequestMapping(value = "/ishciler/delete/{id}", method = RequestMethod.POST)
 	public String handleForSubmit(@PathVariable Long id, RedirectAttributes redirectAttributes) {
 		testService.deleteIshciler(id);
-		redirectAttributes.addFlashAttribute("message", "Ishci deleted by id :"+id);
+		redirectAttributes.addFlashAttribute("message", "İd-si" +id+" olan İşçi silindi!");
 		return "redirect:/ishciler";
 		
 	}

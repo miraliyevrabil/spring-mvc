@@ -8,11 +8,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Əlavə et</title>
 </head>
 <body>
 	<form:form modelAttribute="computers" method="post">
-		<form:input placeholder="Name" path="name"/>
+		<form:input placeholder="Ad" path="name"/>
 		<form:errors path="name"/><br><br>
 	
 		  <select class="form-select" style="height: 40;width: 150" name="ishciler">
@@ -22,7 +22,7 @@
     </c:forEach>
 </select>
 		<br><br>
-		<form:button name="submit">Create</form:button>
+		<form:button name="submit">Əlavə et</form:button>
 	</form:form>
 
 

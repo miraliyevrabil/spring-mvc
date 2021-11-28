@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Sil</title>
 </head>
 <body>
-	<form:form modelAttribute="users" method="post">
-		<h1>Delete?</h1>
-		<form:button name="submit">Delete</form:button>
-		<form:button><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black">No</a></form:button>
+	<form:form modelAttribute="authorities" method="post">
+		<h1>Silmək istədiyiniz üçün əminsinizmi?</h1>
+		<form:button name="submit">Bəli, Sil</form:button>
+		<form:button><a href="http://localhost:8080/authorities" style="text-decoration: none; color: black">Xeyr, Geri qayıt</a></form:button>
 		
 	
 	

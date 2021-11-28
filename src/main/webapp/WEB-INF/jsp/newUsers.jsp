@@ -7,18 +7,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Əlavə et</title>
 </head>
 <body>
 
 	<form:form modelAttribute="users" method="post">
-		<form:input  placeholder="Id" path="id"/>
-		<form:errors path="id"/><br><br>
 		<form:input  placeholder="Username" path="username"/>
 		<form:errors path="username"/><br><br>
 		<form:input  placeholder="Password" path="password"/>
 		<form:errors path="password"/><br><br> 
-		<form:button name="submit">Create</form:button>
+		<select  name="enabled" >
+	  	<option value="true" style="color: green;">True</option>
+		  <option value="false" style="color: red;">False</option>
+		</select><br><br>
+		<form:button name="submit">Əlavə et</form:button>
 	</form:form>
 
 </body>

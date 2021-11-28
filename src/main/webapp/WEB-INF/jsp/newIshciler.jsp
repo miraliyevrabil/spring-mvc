@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Insert title here</title>
+<title>Əlavə et</title>
 </head>
 <body>
 	<form:form modelAttribute="ishciler" method="post">
@@ -21,11 +21,11 @@
 		<form:errors path="soyad"/><br><br>
 		<form:input type="date" path="dogumTarixi"/>
 		<form:errors path="dogumTarixi"/><br><br>
-		<form:input placeholder="Bolme" path="bolme1"/>
+		<form:input placeholder="Bölmə" path="bolme1"/>
 		<form:errors path="bolme1"/><br><br>
-		<form:input placeholder="Unvan" path="unvan"/>
+		<form:input placeholder="Ünvan" path="unvan"/>
 		<form:errors path="unvan"/><br><br>
-		<form:input placeholder="Maas" path="maas"/>
+		<form:input placeholder="Maaş" path="maas"/>
 		<form:errors path="maas"/><br><br>
 	 	<select class="form-select"  name="city" style="height: 40;width: 150">
     <c:forEach items="${city}" var="city">
@@ -35,7 +35,7 @@
 </select>
 		<br><br>	
 	
-		<form:button name="submit">Create</form:button>
+		<form:button name="submit">Əlavə et</form:button>
 		
 	
 	

@@ -44,7 +44,7 @@ public class TestNewComputersController {
 		}
 			
 		computersService.createComputers(computers);
-		redirectAttributes.addFlashAttribute("message", "Computer created by id:"+ computers.getId());
+		redirectAttributes.addFlashAttribute("message", ""+ computers.getId()+"İd-si ilə yeni Komputer yaradıldı!");
 		return "redirect:/computers";
 	}
 }

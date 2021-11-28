@@ -28,7 +28,7 @@ public class TestDeleteComputersController {
 	@RequestMapping(value = "/computers/delete/{id}", method = RequestMethod.POST)
 	public String handleForSubmit(@PathVariable Long id, RedirectAttributes redirectAttributes) {
 		computersService.deleteComputers(id);
-		redirectAttributes.addFlashAttribute("message", "Computer deleted by id :"+id);
+		redirectAttributes.addFlashAttribute("message", "İd-si " +id+ " olan Komputer silindi!");
 		return "redirect:/computers";
 		
 	}
