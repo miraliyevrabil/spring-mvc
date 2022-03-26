@@ -20,4 +20,4 @@ insert into ISHCILER (ID, AD,BOLME1,DOGUM_TARIXI,MAAS,SOYAD,UNVAN,CITY_ID) value
 insert into ISHCILER (ID, AD,BOLME1,DOGUM_TARIXI,MAAS,SOYAD,UNVAN,CITY_ID) values (2,'Vasif' ,'Nəqliyyat' ,  TO_DATE('13-12-1986','dd-MM-yyyy'), 600 , 'Məmmədov' , 'Sumqayıt' , 2);
 insert into ISHCILER (ID, AD,BOLME1,DOGUM_TARIXI,MAAS,SOYAD,UNVAN,CITY_ID) values (3,'Murad' ,'Operator' ,  TO_DATE('29-04-1976','dd-MM-yyyy'), 700 , 'Qarayev' , 'Gəncə' , 3);
 
-insert into COMPUTERS (ID , NAME , ISHCILER_ID) values (1, 'Lenovo' , 2 ); 
+insert into COMPUTERS (ID , NAME , ISHCILER_ID) values (1, 'Lenovo' , 2 );
